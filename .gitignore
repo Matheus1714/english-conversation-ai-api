@@ -1,0 +1,6 @@
+**/*.pyc
+**/*.log
+uploads/*
+**/*.env
+!.env.example
+venv~
