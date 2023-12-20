@@ -8,12 +8,21 @@ from openai import OpenAI
 from log import get_log
 from utils import *
 
-config = dotenv_values(".env")
+# -- Local --
+# config = dotenv_values(".env")
+# OPEN_API_KEY = config.get('OPEN_API_KEY')
+
+# -- Production --
+OPEN_API_KEY = os.environ.get('OPEN_API_KEY', '')
 
 app = Flask(__name__)
 CORS(app)
 
 log = get_log('english_conversation_ai_api.log')
+
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    return jsonify({'message': 'Welcome to English Conversation AI (API)!'}), 200
 
 @app.route('/upload', methods=['POST'])
 def upload_audio():
@@ -26,7 +35,7 @@ def upload_audio():
         audio_file = request.files['audio']
         audio_path = save_audio_file(audio_file, 'input.wav')
 
-        client = OpenAI(api_key=config.get('OPEN_API_KEY'))
+        client = OpenAI(api_key=OPEN_API_KEY)
 
         transcript = transcribe_audio(client, audio_path)
         content = chat_with_gpt(client, transcript)
@@ -43,4 +52,4 @@ def upload_audio():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
