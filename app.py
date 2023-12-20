@@ -1,6 +1,6 @@
 import os
 
-from dotenv import dotenv_values
+# from dotenv import dotenv_values
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 from openai import OpenAI
