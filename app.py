@@ -8,7 +8,7 @@ from openai import OpenAI
 from log import get_log
 from utils import *
 
-config = dotenv_values(".dev.env")
+config = dotenv_values(".env")
 
 app = Flask(__name__)
 CORS(app)
