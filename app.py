@@ -16,7 +16,7 @@ OPEN_API_KEY = config.get('OPEN_API_KEY')
 app = Flask(__name__)
 CORS(app)
 
-log = get_log('english_conversation_ai_api.log')
+log = get_log('speaking_ai.log')
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
