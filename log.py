@@ -1,6 +1,6 @@
 import logging
 
-def get_log(log_file: str = 'debug') -> logging.Logger:
+def get_log(log_file: str = 'undefined') -> logging.Logger:
 
     logging.getLogger().handlers = []
     logging.basicConfig(level=logging.INFO)
