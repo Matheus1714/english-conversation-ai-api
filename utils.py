@@ -3,7 +3,7 @@ import os
 
 upload_folder = 'uploads'
 
-log = get_log('english_conversation_ai_api.log')
+log = get_log('speaking_ai.log')
 
 def save_audio_file(file, filename):
     if not os.path.exists(upload_folder):
