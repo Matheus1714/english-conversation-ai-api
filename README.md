@@ -1,6 +1,6 @@
-# English Conversartion AI (API)
+# Speaking AI (API)
 
-This is the `back-end` from the project [English Conversartion AI](https://github.com/Matheus1714/english-conversation-ai-web).
+This is the `back-end` from the project [Speaking AI](https://github.com/Matheus1714/speaking-ai-web).
 
 ## Table of Content 📜
 
