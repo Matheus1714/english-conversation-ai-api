@@ -30,15 +30,15 @@ The main technologies for the front-end are:
 
 # Features 🚀
 
- [X] Upload audio
- [X] Save audio local
- [X] Audio to Text
- [X] Text to GPT chat
- [X] Text to Audio
- [X] Send result file
- [ ] Create audio bucket
- [ ] Send audio URL and not file
- [ ] Create another route to send audio
+- [X] Upload audio
+- [X] Save audio local
+- [X] Audio to Text
+- [X] Text to GPT chat
+- [X] Text to Audio
+- [X] Send result file
+- [ ] Create audio bucket
+- [ ] Send audio URL and not file
+- [ ] Create another route to send audio
 
 ## Run Project 🏃
 
